@@ -12,7 +12,7 @@
 
 - Keenetic **Carrier KN‑1721** – дешёвый рабочий вариант.
 - Keenetic **Giga KN‑1010/1011/1012** – мощнее, если тариф быстрый.
-- Keenetic **Hopper, Viva, Extra, Titan** – любая свежая модель, где на сайте Keenetic доступна прошивка 4.x/5.x и в списке компонентов есть **OpenVPN client**.[^1][^2]
+- Keenetic **Hopper, Viva, Extra, Titan** – любая свежая модель, где на сайте Keenetic доступна прошивка 4.x/5.x и в списке компонентов есть **OpenVPN client**.
 
 В DNS они так и идут:
 «Wi‑Fi роутер Keenetic Giga», «Keenetic Hopper», «Keenetic Carrier» и т.п.
