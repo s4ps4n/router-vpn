@@ -25,7 +25,7 @@
 - **Xiaomi Mi Router 4A Gigabit**
 - **Mi Router 4C**
 
-Главное: в таблице поддерживаемых устройств [OpenWrt](https://openwrt.org/toh/start) https://openwrt.org/toh/start должна быть именно твоя модель и ревизия (там же лежат прошивки).
+Главное: в таблице поддерживаемых устройств [OpenWrt](https://openwrt.org/toh/start) должна быть именно твоя модель и ревизия (там же лежат прошивки).
 
 ***
 
