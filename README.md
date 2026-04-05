@@ -1,8 +1,43 @@
 # router-vpn
 
+[![Telegram](https://img.shields.io/badge/Telegram-Канал_Айти-2CA5E0?style=flat&logo=telegram)](https://t.me/aiti4biz)
+[![AmneziaVPN](https://img.shields.io/badge/AmneziaVPN-amnezia.org-6C63FF?style=flat&logo=shield)](https://amnezia.org)
+[![OpenWrt](https://img.shields.io/badge/OpenWrt-устройства-00B5E2?style=flat&logo=openwrt)](https://openwrt.org/toh/start)
+[![IP Lists](https://img.shields.io/badge/IP_листы-RockBlack--VPN-181717?style=flat&logo=github)](https://github.com/RockBlack-VPN/ip-address)
+[![AmneziaWG OpenWrt](https://img.shields.io/badge/AmneziaWG_OpenWrt-пакеты-6C63FF?style=flat&logo=github)](https://github.com/amnezia-vpn/amneziawg-openwrt)
+
 Эта история подразумевает что у вас есть уже платный VPS с настроенным OpenVPN где нить в Дании или купленый Амнезия и т.д.
 
 **Инструкция как настроить домашний доступ для всей семьи VPN**
+
+---
+
+## Оглавление
+
+### OpenVPN
+- [1. Выбор роутера](#1-выбор-роутера)
+- [2. Общая схема сети](#2-общая-схема-сети)
+- [3. Настройка на Keenetic (OpenVPN)](#3-настройка-на-keenetic)
+  - [3.1. Включаем OpenVPN-клиент](#31-включаем-openvpn-клиент)
+  - [3.2. Готовые списки IP](#32-готовые-списки-ip-youtube--telegram--chatgpt)
+  - [3.3. Загрузка маршрутов](#33-загрузка-маршрутов-в-keenetic)
+  - [3.4. Настройка DNS](#34-dns-чтобы-провайдер-не-ломал-резолв)
+- [4. Настройка на Mi / OpenWrt (OpenVPN + AmneziaWG)](#4-настройка-на-mi--openwrt)
+  - [4.1. Прошивка OpenWrt](#41-прошивка-openwrt-ax3000t--4a-и-тп)
+  - [4.2. OpenWrt + OpenVPN](#42-openwrt--openvpn)
+  - [4.3. OpenWrt + AmneziaWG](#43-openwrt--amneziawg)
+- [5. Где брать листы IP и доменов](#5-где-брать-листы-ip-и-доменов)
+
+### AmneziaWG
+- [Keenetic + AmneziaWG](#1-keenetic--amneziawg-от-конфига-до-выборочного-роутинга)
+  - [1.1. Подготовка Keenetic](#11-подготовка-keenetic)
+  - [1.2. Получаем конфиг AmneziaWG](#12-получаем-конфиг-amneziawg)
+  - [1.3. Импорт AmneziaWG в Keenetic](#13-импорт-amneziawg-в-keenetic)
+  - [1.4. Добавляем ASC](#14-добавляем-asc-секретный-соус-amneziawg)
+  - [1.5. Выборочный трафик](#15-выборочный-трафик-youtube--telegram--chatgpt)
+  - [1.6. DNS для AmneziaWG](#16-dns-чтобы-провайдер-не-ломал-amneziawg-трафик)
+
+---
 
 ## 1. Выбор роутера
 
@@ -319,11 +354,24 @@ opkg install pbr luci-app-pbr
 - Для более тонкой доменной маршрутизации на Keenetic - проект **keen-pbr** (скрипт с `dnsmasq` и ipset, если захочешь углубиться).
 - Для OpenWrt - pbr умеет работать с доменами через свои resolver-sets, без ручного поиска подсетей.
 
--------------
+---
+
+## Полезные ссылки
+
+| Ресурс | Ссылка | Зачем |
+|---|---|---|
+| Канал Айти (Telegram) | https://t.me/aiti4biz | Статьи и обсуждения |
+| AmneziaVPN (сайт) | https://amnezia.org | Клиент и инструкция по VPS |
+| AmneziaWG для OpenWrt | https://github.com/amnezia-vpn/amneziawg-openwrt | Пакеты AWG под OpenWrt |
+| Таблица устройств OpenWrt | https://openwrt.org/toh/start | Проверить свою модель |
+| IP-листы RockBlack-VPN | https://github.com/RockBlack-VPN/ip-address | bat-файлы маршрутов для Keenetic |
+| pbr для OpenWrt | https://github.com/stangri/source.openwrt.melmac.net | Policy-based routing пакет |
+
+---
 
 **AmneziaWG**
 
--------------
+---
 
 ## 1. Keenetic + AmneziaWG: от конфига до выборочного роутинга
 
